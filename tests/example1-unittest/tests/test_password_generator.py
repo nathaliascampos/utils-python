@@ -16,8 +16,9 @@ Funções
 import unittest
 import re
 
-from password_generator import make_one_special_char, make_one_uppercase_letter, \
-    make_one_lowercase_letter, make_one_number, make_password
+from src.password_generator import make_one_special_char, \
+    make_one_uppercase_letter, make_one_lowercase_letter, make_one_number, \
+    make_password
 
 
 class TestPasswordGenerator(unittest.TestCase):
