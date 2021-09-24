@@ -11,3 +11,9 @@ Run tests:
 ```
 pytest
 ```
+
+Cover tests:
+```
+pip install pytest-cov
+pytest --cov
+```
