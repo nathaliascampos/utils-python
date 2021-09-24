@@ -39,3 +39,10 @@ def test_remove_um_pedido_na_fila(restaurante_com_um_pedido):
 def test_remove_um_pedido_na_fila_vazia(restaurante_fila_vazia):
     restaurante_fila_vazia.remove_pedido()
     assert restaurante_fila_vazia.pedidos_na_fila == 0
+
+
+@pytest.mark.parametrize("inicial,final", [(0, 0), (1, 0), (2, 1)])
+def test_remove_pedidos(inicial, final):
+    restaurante = Restaurante("Pizzaria", inicial)
+    restaurante.remove_pedido()
+    assert restaurante.pedidos_na_fila == final
